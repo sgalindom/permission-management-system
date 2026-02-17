@@ -14,7 +14,7 @@ This project focuses on permission management for enterprise applications with e
 ## Technologies
 - Frontend: React.js
 - Backend: Node.js
-- Database: MongoDB
+- Database: Firebase
 - Authentication: JWT
 
 ## Team Members
