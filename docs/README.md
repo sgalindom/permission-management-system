@@ -13,6 +13,7 @@ Permite a los empleados registrar solicitudes de permiso y a los administradores
 | [FRONTEND.md](./FRONTEND.md) | Estructura de carpetas, componentes, contextos, patrones de UI |
 | [BACKEND.md](./BACKEND.md) | Servicios Firebase, hooks, transacciones, lógica de negocio |
 | [BASE_DE_DATOS.md](./BASE_DE_DATOS.md) | Colecciones Firestore, esquemas, índices, relaciones |
+| [MANUAL_BASE_DATOS.md](./MANUAL_BASE_DATOS.md) | **Manual operativo** de la BD (tareas comunes, backup, troubleshooting) |
 | [DISENO.md](./DISENO.md) | Paleta de colores, tipografía, espaciado, sistema de diseño |
 | [FLUJOS.md](./FLUJOS.md) | Flujos de usuario (login, crear/gestionar solicitudes, notificaciones) |
 | [SEGURIDAD.md](./SEGURIDAD.md) | Reglas de Firestore/Storage, autenticación, roles y permisos |
