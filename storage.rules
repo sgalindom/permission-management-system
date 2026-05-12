@@ -1,0 +1,23 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role == "admin";
+    }
+
+    // requests/{employeeUid}/{folder}/{filename}
+    match /requests/{employeeUid}/{folder}/{filename} {
+      allow read: if isSignedIn() && (request.auth.uid == employeeUid || isAdmin());
+      allow write: if isSignedIn()
+        && request.auth.uid == employeeUid
+        && request.resource.size < 10 * 1024 * 1024; // 10 MB max
+      allow delete: if isAdmin() || request.auth.uid == employeeUid;
+    }
+  }
+}
