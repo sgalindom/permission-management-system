@@ -24,3 +24,9 @@ tsconfig.tsbuildinfo
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# Next.js static export
+out/
+
+# Firebase cache
+.firebase/
