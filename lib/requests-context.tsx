@@ -186,7 +186,11 @@ export function RequestsProvider({ children }: { children: ReactNode }) {
         createdAt: serverTimestamp(),
         updatedAt: serverTimestamp(),
       };
-      const ref = await addDoc(collection(db, "requests"), payload);
+      // Firestore no acepta valores undefined: eliminarlos antes de escribir.
+      const clean = Object.fromEntries(
+        Object.entries(payload).filter(([, v]) => v !== undefined)
+      );
+      const ref = await addDoc(collection(db, "requests"), clean);
       return ref.id;
     },
     []

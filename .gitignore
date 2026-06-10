@@ -30,3 +30,9 @@ out/
 
 # Firebase cache
 .firebase/
+
+# Local seeding/test scripts with credentials (do NOT commit)
+scripts/create-demo-employee.mjs
+scripts/reset-demo-password.mjs
+scripts/test-login.mjs
+scripts/create-admin-user.mjs
